@@ -1,13 +1,11 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
-using Fredborg.Superheroes.Superhero;
-
-page 50103 SuperPowersList
+page 50103 SuperpowersList
 {
     ApplicationArea = All;
-    Caption = 'Super Powers';
+    Caption = 'Superpowers';
     PageType = List;
-    SourceTable = SuperPowers;
+    SourceTable = Superpower;
     UsageCategory = Lists;
 
     layout
@@ -30,5 +28,4 @@ page 50103 SuperPowersList
             }
         }
     }
-
 }

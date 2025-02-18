@@ -1,11 +1,13 @@
-namespace Fredborg.Superheroes.API;
-using Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Api;
+using YannickRe.Superheroes.Superhero;
 
-page 50109 weaponsApi
+page 50109 WeaponApi
 {
     APIGroup = 'superheroes';
-    APIPublisher = 'fredborg';
+    APIPublisher = 'yannickre';
     APIVersion = 'v2.0';
+    ApplicationArea = All;
+    Caption = 'Weapon';
     DelayedInsert = true;
     EntityName = 'weapon';
     EntitySetName = 'weapons';

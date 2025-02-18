@@ -1,11 +1,11 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
 page 50105 SuperheroFactbox
 {
     ApplicationArea = All;
     Caption = 'SuperheroFactbox';
     PageType = CardPart;
-    SourceTable = SuperHero;
+    SourceTable = Superhero;
 
     layout
     {

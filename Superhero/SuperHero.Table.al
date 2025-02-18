@@ -1,14 +1,15 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
 using System.Environment;
 using System.Utilities;
 using System.Text;
-table 50100 SuperHero
+
+table 50100 Superhero
 {
-    Caption = 'SuperHero';
+    Caption = 'Superhero';
     DataClassification = CustomerContent;
-    DrillDownPageId = SuperHeroList;
-    LookupPageId = SuperheroList;
+    DrillDownPageId = SuperheroesList;
+    LookupPageId = SuperheroesList;
 
     fields
     {
@@ -43,7 +44,7 @@ table 50100 SuperHero
             Caption = 'Agility';
             ToolTip = 'Specifies the value of the Agility field.';
         }
-        field(7; PowerRating; Integer)
+        field(7; "Power Rating"; Integer)
         {
             Caption = 'Power Rating';
             ToolTip = 'Specifies the value of the Power Rating field.';

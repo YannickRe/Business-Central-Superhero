@@ -1,11 +1,11 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
-table 50101 SuperPowers
+table 50101 Superpower
 {
-    Caption = 'SuperPowers';
+    Caption = 'Superpower';
     DataClassification = CustomerContent;
-    LookupPageId = SuperPowersList;
-    DrillDownPageId = SuperPowersList;
+    LookupPageId = SuperpowersList;
+    DrillDownPageId = SuperpowersList;
 
     fields
     {

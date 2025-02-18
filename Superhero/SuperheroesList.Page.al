@@ -1,13 +1,13 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
-page 50101 SuperheroList
+page 50101 SuperheroesList
 {
     ApplicationArea = All;
-    Caption = 'Superhero List';
+    Caption = 'Superheroes';
     PageType = List;
-    SourceTable = SuperHero;
+    SourceTable = Superhero;
     UsageCategory = Lists;
-    CardPageId = SuperHeroCard;
+    CardPageId = SuperheroCard;
 
     layout
     {

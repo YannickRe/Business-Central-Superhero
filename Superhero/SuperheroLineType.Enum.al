@@ -1,4 +1,4 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
 enum 50100 SuperheroLineType
 {

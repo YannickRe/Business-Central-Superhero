@@ -1,11 +1,11 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
 table 50102 Weapon
 {
     Caption = 'Weapon';
     DataClassification = CustomerContent;
-    LookupPageId = Weapons;
-    DrillDownPageId = Weapons;
+    LookupPageId = WeaponsList;
+    DrillDownPageId = WeaponsList;
 
     fields
     {

@@ -1,6 +1,6 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
-using Fredborg.Superheroes.Superhero;
+using YannickRe.Superheroes.Superhero;
 
 table 50103 SuperheroLine
 {
@@ -20,18 +20,18 @@ table 50103 SuperheroLine
         field(3; "Code"; Code[50])
         {
             Caption = 'Code';
-            TableRelation = if ("Type" = const(Power)) SuperPowers."Code"
+            TableRelation = if ("Type" = const(Power)) Superpower."Code"
             else if ("Type" = const(Weapon)) Weapon."Code";
 
             trigger OnValidate()
             var
-                SuperPowers: Record SuperPowers;
+                Superpowers: Record Superpower;
                 Weapon: Record Weapon;
             begin
                 if ("Type" = Type::Power) then begin
-                    SuperPowers.Get("Code");
-                    Description := SuperPowers.Description;
-                    "Power Rating" := SuperPowers."Power Rating";
+                    Superpowers.Get("Code");
+                    Description := Superpowers.Description;
+                    "Power Rating" := Superpowers."Power Rating";
                 end;
                 if ("Type" = Type::Weapon) then begin
                     Weapon.Get("Code");
@@ -52,24 +52,24 @@ table 50103 SuperheroLine
         field(6; "Superhero Name"; Code[20])
         {
             Caption = 'Superhero Name';
-            TableRelation = SuperHero."Name";
+            TableRelation = Superhero."Name";
         }
-        field(7; SuperHeroId; Guid)
+        field(7; SuperheroId; Guid)
         {
-            Caption = 'SuperHeroId';
+            Caption = 'SuperheroId';
             DataClassification = SystemMetadata;
             Editable = false;
-            TableRelation = SuperHero."SystemId";
+            TableRelation = Superhero."SystemId";
 
             trigger OnValidate()
             var
-                SuperHero: Record SuperHero;
+                Superhero: Record Superhero;
             begin
-                SuperHero.GetBySystemId(SuperHeroId);
-                rec."Superhero Name" := SuperHero.Name;
+                Superhero.GetBySystemId(SuperheroId);
+                rec."Superhero Name" := Superhero.Name;
             end;
         }
-        field(8; weaponId; Guid)
+        field(8; WeaponId; Guid)
         {
             Caption = 'WeaponId';
             DataClassification = SystemMetadata;
@@ -83,18 +83,18 @@ table 50103 SuperheroLine
                 rec.Code := Weapon.Code;
             end;
         }
-        field(9; superpowerId; Guid)
+        field(9; SuperpowerId; Guid)
         {
-            Caption = 'SuperPowerId';
+            Caption = 'SuperpowerId';
             DataClassification = SystemMetadata;
-            TableRelation = SuperPowers."SystemId";
+            TableRelation = Superpower."SystemId";
 
             trigger OnValidate()
             var
-                SuperPowers: Record SuperPowers;
+                Superpowers: Record Superpower;
             begin
-                SuperPowers.GetBySystemId(SuperPowerId);
-                rec.Code := SuperPowers.Code;
+                Superpowers.GetBySystemId(SuperpowerId);
+                rec.Code := Superpowers.Code;
             end;
         }
     }
@@ -109,15 +109,15 @@ table 50103 SuperheroLine
 
     trigger OnInsert()
     var
-        SuperHero: Record SuperHero;
-        SuperPowers: Record SuperPowers;
+        Superhero: Record Superhero;
+        Superpowers: Record Superpower;
         Weapon: Record Weapon;
     begin
-        SuperHero.Get("Superhero Name");
-        SuperHeroId := SuperHero."SystemId";
+        Superhero.Get("Superhero Name");
+        SuperheroId := Superhero."SystemId";
         if Type = Type::Power then begin
-            SuperPowers.Get("Code");
-            SuperPowerId := SuperPowers."SystemId";
+            Superpowers.Get("Code");
+            SuperpowerId := Superpowers."SystemId";
         end;
         if Type = Type::Weapon then begin
             Weapon.Get("Code");

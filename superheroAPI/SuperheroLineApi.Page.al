@@ -1,16 +1,16 @@
-namespace Fredborg.Superheroes.API;
-using Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Api;
+using YannickRe.Superheroes.Superhero;
 
-page 50107 superherolinesAPI
+page 50107 SuperheroLineApi
 {
     APIGroup = 'superheroes';
-    APIPublisher = 'fredborg';
+    APIPublisher = 'yannickre';
     APIVersion = 'v2.0';
     ApplicationArea = All;
-    Caption = 'superherolinesAPI';
+    Caption = 'SuperheroLine';
     DelayedInsert = true;
-    EntityName = 'superheroLineBC';
-    EntitySetName = 'superheroLinesBC';
+    EntityName = 'superheroLine';
+    EntitySetName = 'superheroLines';
     PageType = API;
     SourceTable = SuperheroLine;
     ODataKeyFields = SystemId;
@@ -42,27 +42,27 @@ page 50107 superherolinesAPI
                 field(systemId; Rec.SystemId)
                 {
                 }
-                field(superHeroId; Rec.SuperHeroId)
+                field(superheroId; Rec.SuperheroId)
                 {
                 }
-                field(powerId; Rec.SuperPowerId)
+                field(superpowerId; Rec.SuperpowerId)
                 {
                 }
                 field(weaponId; Rec.WeaponId)
                 {
                 }
 
-                part(weapons; weaponsAPI)
+                part(weapons; WeaponApi)
                 {
                     EntityName = 'weapon';
                     EntitySetName = 'weapons';
                     SubPageLink = SystemId = field("weaponId");
                 }
-                part(superpowers; superpowersAPI)
+                part(superpowers; SuperpowerApi)
                 {
-                    EntityName = 'superPower';
-                    EntitySetName = 'superPowers';
-                    SubPageLink = SystemId = field("superPowerId");
+                    EntityName = 'superpower';
+                    EntitySetName = 'superpowers';
+                    SubPageLink = SystemId = field("superpowerId");
                 }
 
             }

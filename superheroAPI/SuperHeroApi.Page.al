@@ -1,18 +1,18 @@
-namespace Fredborg.Superheroes.API;
-using Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Api;
+using YannickRe.Superheroes.Superhero;
 
-page 50100 SuperHeroApi
+page 50100 SuperheroApi
 {
     APIGroup = 'superheroes';
-    APIPublisher = 'fredborg';
+    APIPublisher = 'yannickre';
     APIVersion = 'v2.0';
     ApplicationArea = All;
-    Caption = 'superHeroApi';
+    Caption = 'Superhero';
     DelayedInsert = true;
     EntityName = 'superhero';
     EntitySetName = 'superheroes';
     PageType = API;
-    SourceTable = SuperHero;
+    SourceTable = Superhero;
     ODataKeyFields = SystemId;
 
     layout
@@ -42,17 +42,18 @@ page 50100 SuperHeroApi
                 field(strength; Rec.Strength)
                 {
                 }
-                field(powerRating; Rec.PowerRating)
+                field(powerRating; Rec."Power Rating")
                 {
                 }
                 field(profilePicture; Rec.GetProfilePictureBase64())
                 {
                 }
-                part(lines; superheroLinesAPI)
+
+                part(lines; SuperheroLineApi)
                 {
-                    EntityName = 'superheroLineBC';
-                    EntitySetName = 'superheroLinesBC';
-                    SubPageLink = SuperHeroId = field("SystemId");
+                    EntityName = 'superheroLine';
+                    EntitySetName = 'superheroLines';
+                    SubPageLink = SuperheroId = field("SystemId");
                 }
             }
         }

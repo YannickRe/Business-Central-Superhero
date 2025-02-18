@@ -1,4 +1,5 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
+
 page 50106 "Superhero Subpage"
 {
     ApplicationArea = All;

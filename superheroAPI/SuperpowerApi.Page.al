@@ -1,18 +1,18 @@
-namespace Fredborg.Superheroes.API;
-using Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Api;
+using YannickRe.Superheroes.Superhero;
 
-page 50108 superpowersApi
+page 50108 SuperpowerApi
 {
     APIGroup = 'superheroes';
-    APIPublisher = 'fredborg';
+    APIPublisher = 'yannickre';
     APIVersion = 'v2.0';
     ApplicationArea = All;
-    Caption = 'superpowersApi';
+    Caption = 'Superpower';
     DelayedInsert = true;
-    EntityName = 'superPower';
-    EntitySetName = 'superPowers';
+    EntityName = 'superpower';
+    EntitySetName = 'superpowers';
     PageType = API;
-    SourceTable = SuperPowers;
+    SourceTable = Superpower;
     ODataKeyFields = SystemId;
 
     layout

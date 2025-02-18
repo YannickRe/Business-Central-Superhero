@@ -1,6 +1,6 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
-page 50104 Weapons
+page 50104 WeaponsList
 {
     ApplicationArea = All;
     Caption = 'Weapons';

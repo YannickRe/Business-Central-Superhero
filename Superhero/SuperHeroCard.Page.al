@@ -1,11 +1,11 @@
-namespace Fredborg.Superheroes.Superhero;
+namespace YannickRe.Superheroes.Superhero;
 
-page 50102 SuperHeroCard
+page 50102 SuperheroCard
 {
     ApplicationArea = All;
     Caption = 'Superhero Card';
     PageType = Card;
-    SourceTable = SuperHero;
+    SourceTable = Superhero;
 
     layout
     {
@@ -35,7 +35,7 @@ page 50102 SuperHeroCard
                 field(Strength; Rec.Strength)
                 {
                 }
-                field(PowerRating; Rec.PowerRating)
+                field("Power Rating"; Rec."Power Rating")
                 {
                 }
             }
