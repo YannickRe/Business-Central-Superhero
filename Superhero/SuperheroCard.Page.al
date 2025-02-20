@@ -39,11 +39,6 @@ page 50102 SuperheroCard
                 {
                 }
             }
-            part(superheroLines; "Superhero Subpage")
-            {
-                ApplicationArea = All;
-                SubPageLink = "Superhero Name" = field(Name);
-            }
         }
         area(FactBoxes)
         {

@@ -1,11 +1,11 @@
 namespace YannickRe.Superheroes.Superhero;
 
-page 50110 WeaponsList
+page 50104 WritersList
 {
     ApplicationArea = All;
-    Caption = 'Weapons';
+    Caption = 'Writers';
     PageType = List;
-    SourceTable = Weapon;
+    SourceTable = Writer;
     UsageCategory = Lists;
 
     layout
@@ -18,12 +18,9 @@ page 50110 WeaponsList
                 {
                     InstructionalText = 'Specifies the value of the Name field.';
                 }
-                field(Description; Rec.Description)
+                field(Bio; Rec.Bio)
                 {
-                    InstructionalText = 'Specifies the value of the Description field.';
-                }
-                field("Power Rating"; Rec."Power Rating")
-                {
+                    InstructionalText = 'Specifies the value of the Bio field.';
                 }
             }
         }

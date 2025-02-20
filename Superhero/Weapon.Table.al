@@ -9,10 +9,10 @@ table 50102 Weapon
 
     fields
     {
-        field(1; "Code"; Code[50])
+        field(1; "Name"; Code[250])
         {
-            Caption = 'Code';
-            ToolTip = 'Specifies the value of the Code field.';
+            Caption = 'Name';
+            ToolTip = 'Specifies the value of the Name field.';
             NotBlank = true;
         }
         field(2; Description; Text[250])
@@ -28,7 +28,7 @@ table 50102 Weapon
     }
     keys
     {
-        key(PK; "Code")
+        key(PK; "Name")
         {
             Clustered = true;
         }

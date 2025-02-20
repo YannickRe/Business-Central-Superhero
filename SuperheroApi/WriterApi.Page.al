@@ -1,18 +1,18 @@
 namespace YannickRe.Superheroes.Api;
 using YannickRe.Superheroes.Superhero;
 
-page 50108 SuperpowerApi
+page 50111 WriterApi
 {
     APIGroup = 'superheroes';
     APIPublisher = 'yannickre';
     APIVersion = 'v2.0';
     ApplicationArea = All;
-    Caption = 'Superpower';
+    Caption = 'Writer';
     DelayedInsert = true;
-    EntityName = 'superpower';
-    EntitySetName = 'superpowers';
+    EntityName = 'writer';
+    EntitySetName = 'writers';
     PageType = API;
-    SourceTable = Superpower;
+    SourceTable = Writer;
     ODataKeyFields = SystemId;
 
     layout
@@ -21,16 +21,13 @@ page 50108 SuperpowerApi
         {
             repeater(General)
             {
-                field("code"; Rec."Code")
-                {
-                }
-                field(description; Rec.Description)
-                {
-                }
-                field(powerRating; Rec."Power Rating")
-                {
-                }
                 field(systemId; Rec.SystemId)
+                {
+                }
+                field("name"; Rec."Name")
+                {
+                }
+                field(bio; Rec.Bio)
                 {
                 }
             }

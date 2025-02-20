@@ -21,16 +21,16 @@ page 50109 WeaponApi
         {
             repeater(General)
             {
-                field("code"; Rec."Code")
+                field(systemId; Rec.SystemId)
+                {
+                }
+                field("name"; Rec."Name")
                 {
                 }
                 field(description; Rec.Description)
                 {
                 }
                 field(powerRating; Rec."Power Rating")
-                {
-                }
-                field(systemId; Rec.SystemId)
                 {
                 }
             }

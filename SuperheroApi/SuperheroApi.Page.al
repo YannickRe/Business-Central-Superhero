@@ -30,30 +30,23 @@ page 50100 SuperheroApi
                 field(description; Rec.Description)
                 {
                 }
-                field(agility; Rec.Agility)
-                {
-                }
-                field(intelligence; Rec.Intelligence)
-                {
-                }
-                field(speed; Rec.Speed)
-                {
-                }
-                field(strength; Rec.Strength)
-                {
-                }
+                // field(agility; Rec.Agility)
+                // {
+                // }
+                // field(intelligence; Rec.Intelligence)
+                // {
+                // }
+                // field(speed; Rec.Speed)
+                // {
+                // }
+                // field(strength; Rec.Strength)
+                // {
+                // }
                 field(powerRating; Rec."Power Rating")
                 {
                 }
                 field(profilePicture; Rec.GetProfilePictureBase64())
                 {
-                }
-
-                part(lines; SuperheroLineApi)
-                {
-                    EntityName = 'superheroLine';
-                    EntitySetName = 'superheroLines';
-                    SubPageLink = SuperheroId = field("SystemId");
                 }
             }
         }
