@@ -48,6 +48,9 @@ page 50100 SuperheroApi
                 field(profilePicture; Rec.GetProfilePictureBase64())
                 {
                 }
+                field(writerNo; Rec."Writer No.")
+                {
+                }
             }
         }
     }
