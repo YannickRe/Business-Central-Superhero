@@ -1,13 +1,13 @@
 namespace YannickRe.Superheroes.Api;
-
+using YannickRe.Superheroes.Superhero;
 
 page 50107 SuperheroWeaponsApi
 {
     APIGroup = 'superheroes';
     APIPublisher = 'yannickre';
-    APIVersion = 'v2.0';
+    APIVersion = 'v3.0';
     ApplicationArea = All;
-    Caption = 'superheroWeaponsApi';
+    Caption = 'Superhero Weapons';
     DelayedInsert = true;
     EntityName = 'superheroweapon';
     EntitySetName = 'superheroweapons';
@@ -45,7 +45,7 @@ page 50107 SuperheroWeaponsApi
                 {
                     Caption = 'Active';
                 }
-                field(superHeroId; Rec.SuperHeroId)
+                field(superheroId; Rec.SuperheroId)
                 {
                     Caption = 'SuperheroId';
                 }
@@ -53,7 +53,6 @@ page 50107 SuperheroWeaponsApi
                 {
                     Caption = 'WeaponId';
                 }
-
             }
         }
     }

@@ -5,7 +5,7 @@ page 50109 WeaponApi
 {
     APIGroup = 'superheroes';
     APIPublisher = 'yannickre';
-    APIVersion = 'v2.0';
+    APIVersion = 'v3.0';
     ApplicationArea = All;
     Caption = 'Weapon';
     DelayedInsert = true;
@@ -33,7 +33,7 @@ page 50109 WeaponApi
                 field(powerRating; Rec."Power Rating")
                 {
                 }
-                part(superheros; SuperheroWeaponsApi)
+                part(superheroWeapons; SuperheroWeaponsApi)
                 {
                     EntityName = 'superheroweapon';
                     EntitySetName = 'superheroweapons';

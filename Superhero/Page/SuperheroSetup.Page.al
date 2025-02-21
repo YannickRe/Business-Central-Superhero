@@ -1,7 +1,4 @@
-/// <summary>
-/// Unknown BusinessCentralSuperhero.
-/// </summary>
-namespace BusinessCentralSuperhero.BusinessCentralSuperhero;
+namespace YannickRe.Superheroes.Superhero;
 
 page 50103 "Superhero Setup"
 {
@@ -29,9 +26,9 @@ page 50103 "Superhero Setup"
                 {
                     ToolTip = 'Specifies the value of the Weapon Nos. field.', Comment = '%';
                 }
-                field("Writer No.s"; Rec."Writer Nos.")
+                field("Writer Nos."; Rec."Writer Nos.")
                 {
-                    ToolTip = 'Specifies the value of the Writer No.s field.', Comment = '%';
+                    ToolTip = 'Specifies the value of the Writer Nos. field.', Comment = '%';
                 }
             }
         }

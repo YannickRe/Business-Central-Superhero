@@ -1,3 +1,6 @@
+namespace YannickRe.Superheroes.Superhero;
+using Microsoft.Foundation.NoSeries;
+
 table 50103 "Superhero Setup"
 {
     Caption = 'Superhero Setup';
@@ -8,7 +11,6 @@ table 50103 "Superhero Setup"
         field(1; "Primary key"; Code[10])
         {
             Caption = 'Primary key';
-
         }
         field(2; "Superhero Nos."; Code[20])
         {

@@ -26,7 +26,6 @@ table 50100 Superhero
                     NoSeries.TestManual(SuperheroSetup."Superhero Nos.");
                     "No. Series" := '';
                 end;
-
             end;
         }
         field(2; Name; Text[250])
@@ -79,7 +78,6 @@ table 50100 Superhero
             Caption = 'Writer No.';
             DataClassification = CustomerContent;
             TableRelation = Writer."No.";
-
         }
         field(12; "Writer Name"; Text[250])
         {
@@ -87,14 +85,13 @@ table 50100 Superhero
             FieldClass = FlowField;
             Editable = false;
             CalcFormula = lookup(Writer.Name where("No." = field("Writer No.")));
-
         }
         field(13; WriterId; Guid)
         {
             Caption = 'WriterId';
             DataClassification = SystemMetadata;
             Editable = false;
-            TableRelation = Writer."SystemId";
+            TableRelation = Writer."No.";
 
             trigger OnValidate()
             var
@@ -103,7 +100,6 @@ table 50100 Superhero
                 writer.GetBySystemId(WriterId);
             end;
         }
-
     }
     keys
     {

@@ -5,7 +5,7 @@ page 50100 SuperheroApi
 {
     APIGroup = 'superheroes';
     APIPublisher = 'yannickre';
-    APIVersion = 'v2.0';
+    APIVersion = 'v3.0';
     ApplicationArea = All;
     Caption = 'Superhero';
     DelayedInsert = true;
@@ -53,17 +53,14 @@ page 50100 SuperheroApi
                 }
                 field(writerId; Rec.WriterId)
                 {
-
                 }
-                part(SuperheroWeaponsApi; SuperheroWeaponsApi)
+                part(superheroWeapons; SuperheroWeaponsApi)
                 {
                     EntityName = 'superheroweapon';
                     EntitySetName = 'superheroweapons';
-                    SubPageLink = SuperHeroId = field(SystemId);
+                    SubPageLink = SuperheroId = field(SystemId);
                 }
-
             }
-
         }
     }
 

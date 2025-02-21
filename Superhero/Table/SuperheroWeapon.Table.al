@@ -1,3 +1,5 @@
+namespace YannickRe.Superheroes.Superhero;
+
 table 50104 "Superhero Weapon"
 {
     Caption = 'Superhero Weapon';
@@ -27,18 +29,18 @@ table 50104 "Superhero Weapon"
         {
             Caption = 'Quantity';
         }
-        field(6; SuperHeroId; Guid)
+        field(6; SuperheroId; Guid)
         {
-            Caption = 'SuperHeroId';
+            Caption = 'SuperheroId';
             DataClassification = SystemMetadata;
             Editable = false;
-            TableRelation = superhero."SystemId";
+            TableRelation = Superhero."No.";
 
             trigger OnValidate()
             var
                 superHero: Record Superhero;
             begin
-                superHero.GetBySystemId(SuperHeroId);
+                superHero.GetBySystemId(SuperheroId);
             end;
         }
         field(7; WeaponId; Guid)
@@ -46,7 +48,7 @@ table 50104 "Superhero Weapon"
             Caption = 'WeaponId';
             DataClassification = SystemMetadata;
             Editable = false;
-            TableRelation = weapon."SystemId";
+            TableRelation = Weapon."No.";
 
             trigger OnValidate()
             var

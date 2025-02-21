@@ -1,7 +1,4 @@
-/// <summary>
-/// Unknown BusinessCentralSuperhero.
-/// </summary>
-namespace BusinessCentralSuperhero.BusinessCentralSuperhero;
+namespace YannickRe.Superheroes.Superhero;
 
 page 50106 "Superhero Weapon Subform"
 {

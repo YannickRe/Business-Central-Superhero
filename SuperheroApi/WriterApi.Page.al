@@ -5,7 +5,7 @@ page 50111 WriterApi
 {
     APIGroup = 'superheroes';
     APIPublisher = 'yannickre';
-    APIVersion = 'v2.0';
+    APIVersion = 'v3.0';
     ApplicationArea = All;
     Caption = 'Writer';
     DelayedInsert = true;
