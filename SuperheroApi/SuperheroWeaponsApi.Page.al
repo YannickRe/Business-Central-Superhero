@@ -1,6 +1,7 @@
-namespace BusinessCentralSuperhero.BusinessCentralSuperhero;
+namespace YannickRe.Superheroes.Api;
 
-page 50107 "Superhero Weapons Api"
+
+page 50107 SuperheroWeaponsApi
 {
     APIGroup = 'superheroes';
     APIPublisher = 'yannickre';
@@ -12,6 +13,7 @@ page 50107 "Superhero Weapons Api"
     EntitySetName = 'superheroweapons';
     PageType = API;
     SourceTable = "Superhero Weapon";
+    ODataKeyFields = SystemId;
 
     layout
     {
@@ -42,6 +44,14 @@ page 50107 "Superhero Weapons Api"
                 field(active; Rec.Active)
                 {
                     Caption = 'Active';
+                }
+                field(superHeroId; Rec.SuperHeroId)
+                {
+                    Caption = 'SuperheroId';
+                }
+                field(weaponId; Rec.WeaponId)
+                {
+                    Caption = 'WeaponId';
                 }
 
             }

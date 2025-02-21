@@ -27,6 +27,34 @@ table 50104 "Superhero Weapon"
         {
             Caption = 'Quantity';
         }
+        field(6; SuperHeroId; Guid)
+        {
+            Caption = 'SuperHeroId';
+            DataClassification = SystemMetadata;
+            Editable = false;
+            TableRelation = superhero."SystemId";
+
+            trigger OnValidate()
+            var
+                superHero: Record Superhero;
+            begin
+                superHero.GetBySystemId(SuperHeroId);
+            end;
+        }
+        field(7; WeaponId; Guid)
+        {
+            Caption = 'WeaponId';
+            DataClassification = SystemMetadata;
+            Editable = false;
+            TableRelation = weapon."SystemId";
+
+            trigger OnValidate()
+            var
+                weapon: Record Weapon;
+            begin
+                weapon.GetBySystemId(WeaponId);
+            end;
+        }
     }
     keys
     {

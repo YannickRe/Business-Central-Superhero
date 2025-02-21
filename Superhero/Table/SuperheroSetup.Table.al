@@ -8,18 +8,22 @@ table 50103 "Superhero Setup"
         field(1; "Primary key"; Code[10])
         {
             Caption = 'Primary key';
+
         }
         field(2; "Superhero Nos."; Code[20])
         {
             Caption = 'Superhero Nos.';
+            TableRelation = "No. Series";
         }
         field(3; "Weapon Nos."; Code[20])
         {
             Caption = 'Weapon Nos.';
+            TableRelation = "No. Series";
         }
         field(4; "Writer Nos."; Code[20])
         {
             Caption = 'Writer Nos.';
+            TableRelation = "No. Series";
         }
     }
     keys

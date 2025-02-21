@@ -51,7 +51,15 @@ page 50100 SuperheroApi
                 field(writerNo; Rec."Writer No.")
                 {
                 }
+                part(SuperheroWeaponsApi; SuperheroWeaponsApi)
+                {
+                    EntityName = 'superheroweapon';
+                    EntitySetName = 'superheroweapons';
+                    SubPageLink = SuperHeroId = field(SystemId);
+                }
+
             }
+
         }
     }
 
