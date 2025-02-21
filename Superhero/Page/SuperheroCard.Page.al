@@ -1,4 +1,5 @@
 namespace YannickRe.Superheroes.Superhero;
+using BusinessCentralSuperhero.BusinessCentralSuperhero;
 
 page 50102 SuperheroCard
 {
@@ -38,6 +39,20 @@ page 50102 SuperheroCard
                 field("Power Rating"; Rec."Power Rating")
                 {
                 }
+                field("Writer No."; Rec."Writer No.")
+                {
+
+                }
+                field("Writer Name"; Rec."Writer Name")
+                {
+
+                }
+            }
+            part(SuperheroWeapons; "Superhero Weapon Subform")
+            {
+                ApplicationArea = All;
+                SubPageLink = "Superhero No." = field("No.");
+                UpdatePropagation = Both;
             }
         }
         area(FactBoxes)
