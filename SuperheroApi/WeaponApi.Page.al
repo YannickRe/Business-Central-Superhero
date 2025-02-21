@@ -33,6 +33,12 @@ page 50109 WeaponApi
                 field(powerRating; Rec."Power Rating")
                 {
                 }
+                part(superheros; SuperheroWeaponsApi)
+                {
+                    EntityName = 'superheroweapon';
+                    EntitySetName = 'superheroweapons';
+                    SubPageLink = WeaponId = field(SystemId);
+                }
             }
         }
     }

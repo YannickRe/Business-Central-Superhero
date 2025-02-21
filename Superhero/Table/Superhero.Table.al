@@ -89,6 +89,20 @@ table 50100 Superhero
             CalcFormula = lookup(Writer.Name where("No." = field("Writer No.")));
 
         }
+        field(13; WriterId; Guid)
+        {
+            Caption = 'WriterId';
+            DataClassification = SystemMetadata;
+            Editable = false;
+            TableRelation = Writer."SystemId";
+
+            trigger OnValidate()
+            var
+                writer: Record Writer;
+            begin
+                writer.GetBySystemId(WriterId);
+            end;
+        }
 
     }
     keys

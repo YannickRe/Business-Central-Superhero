@@ -51,6 +51,10 @@ page 50100 SuperheroApi
                 field(writerNo; Rec."Writer No.")
                 {
                 }
+                field(writerId; Rec.WriterId)
+                {
+
+                }
                 part(SuperheroWeaponsApi; SuperheroWeaponsApi)
                 {
                     EntityName = 'superheroweapon';
